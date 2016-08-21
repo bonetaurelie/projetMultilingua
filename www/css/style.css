@@ -1,0 +1,135 @@
+/* Empty. Add your own CSS if you like */
+
+h1,h2,h3{
+    font-family: 'Blokletters-Balpen';
+}
+
+button{
+    font-family: 'Blokletters-Balpen';
+}
+
+.background2{
+    background-color: #fdfceb;
+}
+
+/*accueil*/
+.background {
+    background: url(../img/background.jpg) no-repeat center center fixed;
+    width: 450px;
+    height: 450px;
+    background-size: 50%;
+}
+
+.accueil{
+    padding-top: 400px;
+}
+
+/*login*/
+.formulaire{
+    padding-top: 100px;
+    padding-bottom: 40px;
+}
+.inscription{
+    margin-left: 110px ;
+}
+
+/*inscription*/
+.formulaire2{
+    padding-top: 100px;
+}
+
+/*sessions*/
+.card{
+    margin-top: 40px;
+}
+
+/*cours*/
+.cours{
+    padding-top: 100px;
+}
+
+.drapeaux1{
+    margin-left: 70px;
+}
+
+.drapeaux2{
+    margin-top: -140px;
+    margin-left: 210px;
+}
+
+/*leçon*/
+.btnexercices{
+    margin-left: 220px;
+    margin-top: -47px;
+}
+
+.btncours{
+    margin-left: 30px;
+}
+
+.detaillecon{
+    padding-top: 50px;
+    padding-bottom: 30px;
+}
+
+.leconanglais{
+    padding: 50px 20px 20px 20px;
+}
+
+table
+{
+    text-align: center;
+}
+td, th
+{
+    border: 1px solid black;
+}
+
+.table1{
+    margin-left: 120px;
+}
+
+.table2{
+    margin-left: 90px;
+}
+
+.table3{
+    margin-left: 100px;
+}
+
+.tablePortugais{
+    margin-left: 80px;
+}
+
+
+/*exercices*/
+.exos{
+    padding-top: 50px;
+    padding-bottom: 30px;
+}
+
+.btncorrection{
+    margin-left: 220px;
+}
+
+/*correction*/
+.correction{
+    padding-top: 50px;
+    padding-bottom: 30px;
+}
+
+.btnaccueil{
+    margin-left: 20px;
+}
+
+/*alertes*/
+.textAlerte{
+    padding-top: 50px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.btnalerte{
+    padding-top: 30px;
+    padding-left: 80px;
+}
