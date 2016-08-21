@@ -6,9 +6,7 @@
 /*accueil*/
 .background {
     background: url(../img/background.jpg) no-repeat center center fixed;
-    width: 450px;
-    height: 450px;
-    background-size: 50%;
+    background-size: 60%;
 }
 
 .accueil{
