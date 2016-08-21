@@ -1,0 +1,36 @@
+<ion nav-view id="templates/tab-login.html" type="text/ng-template">
+  <ion-view>
+    <ion-content class="padding">
+      <div class="bar bar-header bar-light" >
+        <h1 class="title">Se connecter</h1>
+      </div>
+      <form name="myForm" class="formulaire" ng-submit="doLogin()" novalidate>
+        <div class="list">
+          <label class="item item-input">
+            <span class="input-label">Email</span>
+            <input type="email" ng-model="user.email" name="lMail" required>
+          </label>
+          <div ng-messages="myForm.lMail.$error">
+            <p ng-message="email">Votre email est invalide</p>
+          </div>
+
+          <label class="item item-input">
+            <span class="input-label">Mot de passe</span>
+            <input type="password" ng-model="user.password" name="lPassword" ng-minlength="8">
+          </label>
+          <div ng-messages="myForm.lPassword.$error">
+            <p ng-message="minlength">Votre mot de passe doit avoir au moins 8 caractères</p>
+          </div>
+
+          <label class="item">
+            <button class="button button-block button-calm" ng-click="showAlert()" type="submit">Se connecter</button>
+          </label>
+        </div>
+      </form>
+      <a class=" btnInscription button button-outline button-energized icon icon-right ion-chevron-right" href="#/inscription">Inscription</a>
+    </ion-content>
+  </ion-view>
+</ion nav-view>
+
+
+
