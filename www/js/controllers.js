@@ -48,10 +48,15 @@ angular.module('ProjetLangue.controllers', [])
           $scope.user= getUser();
         });
 
+        $scope.save= function (user) {
+          if($scope.user.email && $scope.user.password && $scope.user.nom && $scope.user.prenom){
+            $state.go('tab.login');
+          }
+        }
       };
 
       function  getUser(){
-        $state.go('tab.login');
+          $state.go('tab.login');
       }
     })
 
