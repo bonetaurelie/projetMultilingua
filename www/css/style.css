@@ -109,6 +109,10 @@ td, th
     margin-left: 220px;
 }
 
+.btncorrectionall,.btncorrectionanglais,.btncorrectionesp{
+    margin-left: 0px;
+}
+
 /*correction*/
 .correction{
     padding-top: 50px;
