@@ -27,7 +27,7 @@ angular.module('ProjetLangue.controllers', [])
       };
 
       $scope.doLogin = function() {
-        if($scope.user.email || $scope.user.password){
+        if($scope.user.email && $scope.user.password){
           $scope.modal.hide();
           $state.go('tab.cours');
         }
