@@ -1,0 +1,17 @@
+<ion-view>
+  <ion-content>
+    <div class="sessions bar bar-header bar-light" >
+      <h1 class="title">Sessions du mois d'août 2016</h1>
+    </div>
+    _<div class="card" ng-repeat="event in events">
+    <div class="item item-divider">
+      {{event.title}}
+    </div>
+    <div class="item item-text-wrap">
+      {{ event.description }}
+      <p/>
+      <strong>Quand: {{ event.date | date:'short' }}</strong>
+    </div>
+  </div>
+  </ion-content>
+</ion-view>
