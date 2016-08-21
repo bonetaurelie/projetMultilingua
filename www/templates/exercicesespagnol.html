@@ -1,129 +1,78 @@
 <ion-view>
     <ion-content>
-        <div class="bar bar-header bar-light" >
-            <h1 class=" leçon title">Vos exercices</h1>
+        <div class="bar bar-header bar-light">
+            <h1 class="leçon title">Vos exercices</h1>
         </div>
         <div class="exos padding">
-            <h4>Choisissez le mot qui a le bon accent tonique</h4>
-            <div>
-                <p> 1. ¡A mí, me gusta el <select>
-                    <option selected>mélon</option>
-                    <option>melon</option>
-                    <option>melón</option>
-                </select>. (la prononciation porte sur la syllabe : ON) </p>
+            <h4>Ecoutez la piste et écrivez les sons</h4>
+            <div class="list card" ng-repeat="audio in audioTracks">
+                <div class="item item-avatar">
+                    <img src="http://findicons.com/files/icons/2711/free_icons_for_windows8_metro/512/audio_wave.png">
+                    <h2>{{audio.title}}</h2>
+                </div>
+
+                <div class="item tabs tabs-secondary tabs-icon-left">
+                    <a class="tab-item" href="../audio/exo.mp3" ng-click="playTrack(audio.track, audio.key)">
+                        <i class="icon ion-ios-play"></i>
+                        Play
+                    </a>
+                    <a class="tab-item" href="#/exercicesespagnol" ng-click="stopTrack()">
+                        <i class="icon ion-android-checkbox-blank"></i>
+                        Stop
+                    </a>
+                </div>
             </div>
 
-            <div>
-                <p>2. Viene de <select>
-                    <option selected>Brázil</option>
-                    <option>Brasíl</option>
-                    <option>Brasil</option>
-                </select>. (la prononciation porte sur la syllabe : SIL)</p>
-            </div>
-
-            <div>
-                <p>3. A mí, no me gustan los <select>
-                    <option selected>sabádos</option>
-                    <option>sabadós</option>
-                    <option>sábados</option>
-                </select>. (la prononciation porte sur la syllabe : SA)</p>
-            </div>
-
-            <div>
-                <p>4. Es una niña rica y mimada pero con muy buen <select>
-                    <option selected>corázon</option>
-                    <option>corazón</option>
-                    <option>córazon</option>
-                </select>. (la prononciation porte sur la syllabe : ZON)</p>
-            </div>
-
-            <div>
-                <p>5. Mi  <select>
-                    <option selected>papá</option>
-                    <option>papa</option>
-                    <option>pápa</option>
-                </select>es alto.(la prononciation porte sur la syllabe :2è PA)</p>
-            </div>
-
-            <div>
-                <p>6. ¿ <select>
-                    <option selected>Cuantós</option>
-                    <option>Cuántos</option>
-                    <option>Cúantos</option>
-                </select>años tienes?(la prononciation porte sur la syllabe : CUA)</p>
-            </div>
-
-            <div>
-                <p>7. Ambas  <select>
-                    <option selected>jovénes</option>
-                    <option>jóvenes</option>
-                    <option>jovenés</option>
-                </select>actrices son argentinas.(la prononciation porte sur la syllabe : JO)</p>
-            </div>
-
-            <div>
-                <p>8. Mi materia preferida es <select>
-                    <option selected>psicólogia</option>
-                    <option>psicologiá</option>
-                    <option>psicología</option>
-                </select>. (la prononciation porte sur la syllabe : GI)</p>
-            </div>
-
-            <div>
-                <p>9. Voy a ver una <select>
-                    <option selected>peliculá</option>
-                    <option>pélicula</option>
-                    <option>película</option>
-                </select>.(la prononciation porte sur la syllabe : LI)</p>
-            </div>
-
-            <div>
-                <p>10. Tengo un <select>
-                    <option selected>idólo</option>
-                    <option>idoló</option>
-                    <option>idolo</option>
-                </select>.(la prononciation porte sur la syllabe : I)</p>
-            </div>
-
-            <div>
-                <p>11. Mi deporte favorito es la <select>
-                    <option selected>nátacion</option>
-                    <option>natacíon</option>
-                    <option>natación</option>
-                </select>.(la prononciation porte sur la syllabe : CION)</p>
-            </div>
-
-            <div>
-                <p>12. Hace movimientos <select>
-                    <option selected>sincrónicos</option>
-                    <option>sincronicos</option>
-                    <option>sincronícos</option>
-                </select>.(la prononciation porte sur la syllabe : CRO)</p>
-            </div>
-
-            <div>
-                <p>13. Tiene un <select>
-                    <option selected>hámster</option>
-                    <option>hamstér</option>
-                    <option>hamster</option>
-                </select>.(la prononciation porte sur la syllabe : HAM)</p>
-            </div>
-
-            <div>
-                <p> 14.  <select>
-                    <option selected>Cómo</option>
-                    <option>Como</option>
-                    <option>Comó</option>
-                </select>te llamas ?(la prononciation porte sur la syllabe : CO)</p>
-            </div>
-
-            <div>
-                <p>15. Siempre quiero tener <select>
-                    <option selected>razón</option>
-                    <option>rázon</option>
-                    <option>razon</option>
-                </select>.(la prononciation porte sur la syllabe : ZON)</p>
-            </div>
+            <p>1. No creo que <select>
+                <option selected>hagua</option>
+                <option>haga</option>
+                <option>haja</option>
+            </select>  ningún movimiento extraño, de todas formas debes estar atento.</p>
+            <p>2. A Luis no le gustan los  <select>
+                <option selected>guisantes</option>
+                <option>gisantes</option>
+                <option>jisantes</option>
+            </select> , por favor no los añadas al guiso.</p>
+            <p>3. Que <select>
+                <option selected>dija</option>
+                <option>diga</option>
+                <option>digua</option>
+            </select> lo que quiera, de todas formas nos vamos al monte.</p>
+            <p>4. Por favor, me lo <select>
+                <option selected>juardas</option>
+                <option>guárdas</option>
+                <option>guardas</option>
+            </select> en tu congelador, es demasiado grande para el mío.</p>
+            <p>5. Haz el favor de quitarte esa <select>
+                <option selected>jorra</option>
+                <option>górra</option>
+                <option>gorra</option>
+            </select> , no te favorece en absoluto.</p>
+            <p>6. El producto para <select>
+                <option selected>enguajar</option>
+                <option>enjuajar</option>
+                <option>enjuagar</option>
+            </select> la boca que me recetó, me produce llagas.</p>
+            <p>7. El acíbar es un producto <select>
+                <option selected>amargo</option>
+                <option>amarjo</option>
+                <option>amárgo</option>
+            </select>.</p>
+            <p>8. Ahora <select>
+                <option selected>despliege</option>
+                <option>despliegue</option>
+                <option>despliegué</option>
+            </select> los laterales de la tienda de campaña y verá su amplitud.</p>
+            <p>9. Creo que tengo una espina de pescado clavada en la <select>
+                <option selected>garganta</option>
+                <option>jarganta</option>
+                <option>garjanta</option>
+            </select>.</p>
+            <p>10. Creo que este <select>
+                <option selected>guiso</option>
+                <option>giso</option>
+                <option>guíso</option>
+            </select> de atún no lo supera ningún cocinero.</p>
         </div>
 
         <div class="btncorrectionesp">
