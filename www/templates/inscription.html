@@ -9,7 +9,7 @@
                 <div class="list">
                     <label class="item item-input">
                         <span class="input-label">Votre nom :</span>
-                        <input type="text" ng-model="user.nom" name="uNom" ng-minlength="2" required>
+                        <input type="text" ng-model="user.nom" name="uNom" ng-minlength="3" required>
                     </label><br/>
                     <div ng-messages="inscForm.uNom.$error">
                         <p ng-message="required">Ce champ est obligatoire</p>
@@ -18,7 +18,7 @@
 
                     <label class="item item-input">
                         <span class="input-label">Votre prénom :</span>
-                        <input type="text" ng-model="user.prenom" name="uPrenom" ng-minlength="2" required>
+                        <input type="text" ng-model="user.prenom" name="uPrenom" ng-minlength="3" required>
                     </label><br/>
                     <div ng-messages="inscForm.uPrenom.$error">
                         <p ng-message="required">Ce champ est obligatoire</p>

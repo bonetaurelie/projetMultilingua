@@ -4,20 +4,22 @@
             <h1 class="title">Contact</h1>
         </div>
 
-        <form name="contactForm" class=" formulaire" ng-submit="envoi()">
+        <form name="contactForm" class=" formulaire3" ng-submit="envoi()" novalidate>
             <div class="list">
                 <label class="item item-input">
                     <span class="input-label">Votre nom :</span>
-                    <input type="text" ng-model="contact.nom" name="cNom" ng-minlength="2" required>
+                    <input type="text" ng-model="contact.nom" name="cNom" ng-minlength="3" required>
                 </label><br/>
                 <div ng-messages="contactForm.cNom.$error">
+                    <p ng-message="required">Ce champ est obligatoire</p>
                     <p ng-message="minlength">Votre nom est trop court</p>
                 </div>
                 <label class="item item-input">
                     <span class="input-label">Votre prénom :</span>
-                    <input type="text" ng-model="contact.prenom" name="cPrenom" ng-minlength="2" required>
+                    <input type="text" ng-model="contact.prenom" name="cPrenom" ng-minlength="3" required>
                 </label><br/>
                 <div ng-messages="contactForm.cPrenom.$error">
+                    <p ng-message="required">Ce champ est obligatoire</p>
                     <p ng-message="minlength">Votre prénom est trop court</p>
                 </div>
                 <label class="item item-input">
@@ -25,6 +27,7 @@
                     <input type="email" ng-model="contact.email" name="cMail" required>
                 </label><br/>
                 <div ng-messages="contactForm.cMail.$error">
+                    <p ng-message="required">Ce champ est obligatoire</p>
                     <p ng-message="email">Votre email est invalide</p>
                 </div>
                 <label class="item item-input">
@@ -32,6 +35,7 @@
                     <input type="text" ng-model="contact.objet" name="cObjet" ng-minlength="10" required>
                 </label><br/>
                 <div ng-messages="contactForm.cObjet.$error">
+                    <p ng-message="required">Ce champ est obligatoire</p>
                     <p ng-message="minlength">L'objet de votre message est trop court</p>
                 </div>
                 <label class="item item-input">
@@ -39,6 +43,7 @@
                     <input type="text" ng-model="contact.message" name="cMessage" ng-minlength="20" required>
                 </label><br/>
                 <div ng-messages="contactForm.cMessage.$error">
+                    <p ng-message="required">Ce champ est obligatoire</p>
                     <p ng-message="minlength">Votre message doit comporter au moins 20 caractères</p>
                 </div>
                 <button class="button button-calm button-block" type="submit">Valider</button><br/>
