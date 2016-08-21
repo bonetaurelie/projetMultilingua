@@ -1,0 +1,39 @@
+<!--
+Create tabs with an icon and label, using the tabs-positive style.
+Each tab's child <ion-nav-view> directive will have its own
+navigation history that also transitions its views in and out.
+-->
+<ion-tabs class="tabs-icon-top tabs-color-active-calm">
+
+  <!-- accueil Tab -->
+  <ion-tab title="Accueil"  icon-off="ion-home" icon-on="ion-home" href="#/tab/accueil">
+    <ion-nav-view name="tab-accueil"></ion-nav-view>
+  </ion-tab>
+
+  <!-- login Tab -->
+  <ion-tab title="Login" icon-off="ion-log-in" icon-on="ion-log-in" href="#/tab/login">
+    <ion-nav-view name="tab-login"></ion-nav-view>
+  </ion-tab>
+
+  <!-- Cours Tab -->
+  <ion-tab title="Cours" icon-off="ion-ios-compose-outline" icon-on="ion-ios-compose-outline" href="#/tab/cours">
+    <ion-nav-view name="tab-cours"></ion-nav-view>
+  </ion-tab>
+
+  <!-- Sessions Tab -->
+  <ion-tab title="Sessions" icon-off="ion-calendar" icon-on="ion-calendar" href="#/tab/sessions">
+    <ion-nav-view name="tab-sessions"></ion-nav-view>
+  </ion-tab>
+
+  <!-- Alertes Tab -->
+  <ion-tab title="Alertes" icon-off="ion-ios-bell-outline" icon-on="ion-ios-bell-outline" href="#/tab/alertes">
+    <ion-nav-view name="tab-alertes"></ion-nav-view>
+  </ion-tab>
+
+  <!-- Contact Tab -->
+  <ion-tab title="Contact" icon-off="ion-android-contact" icon-on="ion-android-contact" href="#/tab/contact">
+    <ion-nav-view name="tab-contact"></ion-nav-view>
+  </ion-tab>
+
+
+</ion-tabs>
