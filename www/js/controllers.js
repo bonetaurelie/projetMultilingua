@@ -73,7 +73,47 @@ angular.module('ProjetLangue.controllers', [])
     .controller('LeconanglaisCtrl', function ($scope) {
     })
 
-    .controller('LeconespagnolCtrl', function ($scope) {
+    .controller('LeconespagnolCtrl', function ($scope, $ionicPlatform, $cordovaNativeAudio) {
+      var audio = [{
+        id: 1,
+        key: 'leçon',
+        title: "Écriture des sons GA - GUE - GUI - GO - GU",
+        track: 'audio/lecon.mp3',
+      }];
+
+      $scope.audioTracks = Array.prototype.slice.call(audio, 0);
+
+      $scope.player = {
+        key: '' // Holds a last active track
+      }
+
+      $ionicPlatform.ready(function() {
+
+        $scope.playTrack = function(track, key) {
+          // Preload an audio track before we play it
+          $cordovaNativeAudio.preloadComplex(key, track, 1, 1, 0, function(msg) {
+            // If this is not a first playback stop and unload previous audio track
+            if ($scope.player.key.length > 0) {
+              $cordovaNativeAudio.stop($scope.player.key); // Stop audio track
+              $cordovaNativeAudio.unload($scope.player.key); // Unload audio track
+            }
+
+            $cordovaNativeAudio.play(key); // Play audio track
+            $scope.player.key = key; // Set a current audio track so we can close it if needed
+          }, function(msg) {
+            console.log('error: ' + msg); // Loading error
+          });
+        };
+
+        $scope.stopTrack = function() {
+          // If this is not a first playback stop and unload previous audio track
+          if ($scope.player.key.length > 0) {
+            $cordovaNativeAudio.stop($scope.player.key); // Stop audio track
+            $cordovaNativeAudio.unload($scope.player.key); // Unload audio track
+            $scope.player.key = ''; // Remove a current track on unload, it will break an app if we try to unload it again in playTrack function
+          }
+        };
+      });
     })
 
     .controller('LeconportugaisCtrl', function ($scope) {
