@@ -1,13 +1,4 @@
 /* Empty. Add your own CSS if you like */
-
-h1,h2,h3{
-    font-family: 'Blokletters-Balpen';
-}
-
-button{
-    font-family: 'Blokletters-Balpen';
-}
-
 .background2{
     background-color: #fdfceb;
 }
@@ -132,4 +123,9 @@ td, th
 .btnalerte{
     padding-top: 30px;
     padding-left: 80px;
+}
+
+/*contact*/
+.formulaire3{
+    padding-top: 80px;
 }
