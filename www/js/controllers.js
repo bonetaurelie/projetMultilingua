@@ -42,7 +42,7 @@ angular.module('ProjetLangue.controllers', [])
           "nom": user.nom,
           "prenom": user.prenom,
           "email": user.email,
-          "password": user.password,
+          "password": user.password
         };
         $http.post(url,postData).success(function(data){
           $scope.user= getUser();
@@ -78,14 +78,14 @@ angular.module('ProjetLangue.controllers', [])
         id: 1,
         key: 'leçon',
         title: "Écriture des sons GA - GUE - GUI - GO - GU",
-        track: 'audio/lecon.mp3',
+        track: 'audio/lecon.mp3'
       }];
 
       $scope.audioTracks = Array.prototype.slice.call(audio, 0);
 
       $scope.player = {
         key: '' // Holds a last active track
-      }
+      };
 
       $ionicPlatform.ready(function() {
 
@@ -130,14 +130,14 @@ angular.module('ProjetLangue.controllers', [])
         id: 1,
         key: 'exo',
         title: "Écriture des sons GA - GUE - GUI - GO - GU",
-        track: 'audio/exo.mp3',
+        track: 'audio/exo.mp3'
       }];
 
       $scope.audioTracks = Array.prototype.slice.call(audio, 0);
 
       $scope.player = {
         key: '' // Holds a last active track
-      }
+      };
 
       $ionicPlatform.ready(function() {
 
@@ -264,10 +264,10 @@ angular.module('ProjetLangue.controllers', [])
         }).then(function () {
           console.log("notif ok");
         })
-      }
+      };
 
       $scope.add=function () {
-        var alarmTime= new Date('08/21/2016 8:00');
+        var alarmTime= new Date();
         alarmTime.setMinutes(alarmTime.getMinutes() + 1);
         $cordovaLocalNotification.add({
           date: alarmTime,
