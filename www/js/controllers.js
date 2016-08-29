@@ -34,10 +34,10 @@ angular.module('ProjetLangue.controllers', [])
       };
     })
 
-    .controller('InscriptionCtrl', function($scope,$state,$http,$ionicPopup,$ionicModal) {
+    .controller('InscriptionCtrl', function($scope,$state,$http) {
       var url = "https://multilingua-c2e9b.firebaseio.com/user.json";
       $scope.user = getUser();
-      $scope.save = function(user) {
+      $scope.save = function (user) {
         var postData = {
           "nom": user.nom,
           "prenom": user.prenom,
@@ -47,16 +47,16 @@ angular.module('ProjetLangue.controllers', [])
         $http.post(url,postData).success(function(data){
           $scope.user= getUser();
         });
-
-        $scope.save= function (user) {
-          if($scope.user.email && $scope.user.password && $scope.user.nom && $scope.user.prenom){
-            $state.go('tab.login');
-          }
-        }
       };
 
+        $scope.save= function(user){
+          $scope.user = getUser();
+          if( $scope.user.password && $scope.user.email && $scope.user.nom && $scope.user.prenom){
+            $state.go('tab.login');
+          }
+        };
       function  getUser(){
-          $state.go('tab.login');
+        $state.go('tab.login');
       }
     })
 
