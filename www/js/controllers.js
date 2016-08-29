@@ -284,13 +284,10 @@ angular.module('ProjetLangue.controllers', [])
       $scope.envoi = function () {
         if (window.plugins && window.plugins.emailComposer) {
           window.plugins.emailComposer.showEmailComposerWithCallback(function (result) {
-                $scope.modal.hide();
-                $state.go('tab.accueil');
               },
               $scope.contact.objet,    //sujet
-              "Message de " + $scope.contact.nom + $scope.contact.prenom + $scope.contact.email,  //message
               $scope.contact.message,   //message
-              ["bonetaurelie@yahoo.fr"],   //to
+              ["bonetaurelie@gmail.com"],  //to
               null,            //cc
               null,            //bcc
               false,            //ishtml
