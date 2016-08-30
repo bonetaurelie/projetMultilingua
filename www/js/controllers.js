@@ -282,18 +282,20 @@ angular.module('ProjetLangue.controllers', [])
     .controller('ContactCtrl', function($scope,$state) {
       $scope.contact = {};
       $scope.envoi = function () {
-        if (window.plugins && window.plugins.emailComposer) {
-          window.plugins.emailComposer.showEmailComposerWithCallback(function (result) {
-              },
-              $scope.contact.objet,    //sujet
-              $scope.contact.message,   //message
-              ["bonetaurelie@gmail.com"],  //to
-              null,            //cc
-              null,            //bcc
-              false,            //ishtml
-              null,             //attachments
-              null              //attachmentsdata
-          );
+        if($scope.contact.nom && $scope.contact.prenom && $scope.contact.email && $scope.contact.objet && $scope.contact.message){
+          if (window.plugins && window.plugins.emailComposer) {
+            window.plugins.emailComposer.showEmailComposerWithCallback(function (result) {
+                },
+                $scope.contact.objet,    //sujet
+                $scope.contact.message,   //message
+                ["bonetaurelie@gmail.com"],  //to
+                null,            //cc
+                null,            //bcc
+                false,            //ishtml
+                null,             //attachments
+                null              //attachmentsdata
+            );
+          }
         }
       };
     });
