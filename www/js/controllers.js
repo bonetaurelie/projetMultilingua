@@ -78,7 +78,7 @@ angular.module('ProjetLangue.controllers', [])
         id: 1,
         key: 'leçon',
         title: "Écriture des sons GA - GUE - GUI - GO - GU",
-        track: 'audio/lecon.mp3'
+        track: 'www/audio/lecon.mp3'
       }];
 
       $scope.audioTracks = Array.prototype.slice.call(audio, 0);
@@ -130,7 +130,7 @@ angular.module('ProjetLangue.controllers', [])
         id: 1,
         key: 'exo',
         title: "Écriture des sons GA - GUE - GUI - GO - GU",
-        track: 'audio/exo.mp3'
+        track: 'www/audio/exo.mp3'
       }];
 
       $scope.audioTracks = Array.prototype.slice.call(audio, 0);
