@@ -19,6 +19,6 @@ Il est nécessaire d'avoir Android Studio d'installé et un device de déclaré 
 En ligne de commande taper: ionic build android dans un premier temps puis ionic emulate android
 
 - Sur un vrai téléphone Android:
-En ligne de commande tape: ionic build android puis ionic run andoid -l -r -s
+En ligne de commande tape: ionic build android puis ionic run android -l -c -s
 
-Dans tous les cas, si vous mettez ionic run android -l -r -s et que vous n'avez pas branché de téléphone à l'ordinateur, l'émulateur se lancera par défaut.
+Dans tous les cas, si vous mettez ionic run android -l -c -s et que vous n'avez pas branché de téléphone à l'ordinateur, l'émulateur se lancera par défaut.
