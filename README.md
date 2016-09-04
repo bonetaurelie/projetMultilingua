@@ -14,9 +14,11 @@ Utilisation de l'application:
 - Sur le serveur:
 En ligne de commande taper: ionic serve --lab mais dans ce cas certaines fonctionnalités ne seront pas disponibles.
 
+Pour utiliser aussi bien l'application sur emulateur que sur téléphone Android, il faudra utiliser la commande ionic run android -l -c -s car elle permettra de lire le fichier audio présent dans la partie cours de l'application.
+
 - Sur l'emulateur Android:
 Il est nécessaire d'avoir Android Studio d'installé et un device de déclaré dans AVD Manager.
-En ligne de commande taper: ionic build android dans un premier temps puis ionic emulate android
+En ligne de commande taper: ionic build android dans un premier temps puis  ionic run android -l -c -s
 
 - Sur un vrai téléphone Android:
 En ligne de commande tape: ionic build android puis ionic run android -l -c -s
